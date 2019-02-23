@@ -1,0 +1,43 @@
+{
+  "name": "seo-audit.css",
+  "version": "0.1.0",
+  "homepage": "http://picturepan2.github.io/seo-audit.css",
+  "author": "Yan Zhu <picturepan2@hotmail.com>",
+  "description": "SEO Audit Tool powered by Pure CSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picturepan2/seo-audit.css.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "framework",
+    "seo",
+    "audit",
+    "lint",
+    "sass",
+    "modern"
+  ],
+  "bugs": {
+    "url": "https://github.com/picturepan2/seo-audit.css/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-pug": "latest",
+    "jstransformer-highlight": "latest",
+    "jstransformer-markdown-it": "latest"
+  },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "Edge >= 12",
+    "Firefox ESR",
+    "last 4 Safari versions",
+    "last 4 Opera versions",
+    "Explorer >= 10"
+  ]
+}
