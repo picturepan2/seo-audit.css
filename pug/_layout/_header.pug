@@ -1,0 +1,17 @@
+header.navbar
+  .navbar-section
+    .docs-brand
+      a.docs-logo(href=domain)
+        img(src='assets/img/spectre-logo.svg' alt='Spectre.css CSS Framework')
+        h1 SEO AUDIT.CSS
+
+    .docs-nav.hide-sm
+      a.btn.btn-link(href="errors.html", class= (slug == 'errors' ? 'active' : false))
+        | Errors
+      a.btn.btn-link(href="warnings.html", class= (slug == 'warnings' ? 'active' : false))
+        | Warnings
+      a.btn.btn-link(href="advices.html", class= (slug == 'advices' ? 'active' : false))
+        | Advices
+
+  .navbar-section
+    a.btn.btn-primary(href="https://github.com/picturepan2/seo-audit.css" target="_blank") GitHub

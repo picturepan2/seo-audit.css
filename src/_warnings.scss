@@ -1,1 +1,18 @@
 // SEO Audit - Warnings
+// Missing or empty [alt] for images 
+img:not([alt]) {
+  @include seo-tip('warning', 'Missing [alt] for images');
+}
+
+img[alt=''],
+img[alt=' '] {
+  @include seo-tip('warning', 'Empty [alt] for images');
+}
+
+// Document avoids plugins
+embed,
+object,
+applet {
+  @include seo-tip('warning', 'Document avoids plugins');
+}
+

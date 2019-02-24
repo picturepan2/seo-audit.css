@@ -1,0 +1,9 @@
+// Base
+* {
+  &:focus,
+  &:hover {
+    &::after {
+      z-index: 999999 !important;
+    }
+  }
+}

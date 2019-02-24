@@ -1,7 +1,30 @@
 // Variables and mixins
 @import "variables";
+@import "mixins";
 
 /*! SEO Audit.css v#{$version} | MIT License | github.com/picturepan2/seo-audit.css */
+body {
+  counter-reset: error warning advice;
+}
+
+@import "base";
 @import "errors";
 @import "warnings";
 @import "advices";
+
+// SEO Audit Results
+body {
+  &::after {
+    background: rgba($dark-color, .95);
+    bottom: $unit-2;
+    color: $light-color;
+    content: "❤️ Errors" ": " counter(error) "\a " "💛 Warnings" ": " counter(warning) "\a" "💙 Advices" ": " counter(advice) "\a";
+    display: block;
+    font-size: 13px;
+    left: $unit-2;
+    padding: $unit-2 $unit-4;
+    position: fixed;
+    width: 150px;
+    white-space: pre;
+  }
+}

@@ -8,7 +8,7 @@ var pug = require('gulp-pug');
 
 gulp.task('watch', function() {
   gulp.watch('./**/*.scss', ['build']);
-  gulp.watch('./assets/**/*.scss', ['docs']);
+  gulp.watch('./assets/scss/*.scss', ['docs']);
   gulp.watch('./pug/**/*.pug', ['docs']);
 });
 
@@ -28,7 +28,7 @@ gulp.task('build', function() {
 });
 
 gulp.task('docs', function() {
-  gulp.src('./src/*.scss')
+  gulp.src('./assets/scss/*.scss')
     .pipe(sass({outputStyle: 'compact', precision: 10})
       .on('error', sass.logError)
     )

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SEO Audit.css</title>
+    <title>SEO Warnings - SEO Audit.css</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="SEO Audit Tool powered by Pure CSS">
     <meta name="author" content="Yan Zhu">
-    <meta property="og:url" content="https://picturepan2.github.io/seo-audit.css/">
-    <meta property="og:title" content="SEO Audit.css">
+    <meta property="og:url" content="https://picturepan2.github.io/seo-audit.css/warnings.html">
+    <meta property="og:title" content="SEO Warnings - SEO Audit.css">
     <meta property="og:description" content="SEO Audit Tool powered by Pure CSS">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@spectrecss">
@@ -19,17 +19,44 @@
     <link rel="stylesheet" href="assets/css/spectre.min.css">
     <link rel="stylesheet" href="assets/css/docs.min.css">
     <link rel="stylesheet" href="dist/seo-audit.min.css">
-    <link rel="canonical" href="https://picturepan2.github.io/seo-audit.css/">
+    <link rel="canonical" href="https://picturepan2.github.io/seo-audit.css/warnings.html">
   </head>
   <body>
-    <div class="section section-hero bg-gray">
-      <div class="grid-hero container grid-lg text-center" id="overview">
-        <div class="docs-brand"><a class="docs-logo" href="index.html"><img src="assets/img/spectre-logo.svg" alt="Spectre.css CSS Framework">
-            <h2>SPECTRE</h2></a></div>
-        <h1>SEO AUDIT.CSS</h1>
-        <h2>SEO Audit Tool powered by Pure CSS</h2>
-        <p><a class="btn btn-primary btn-lg" href="https://github.com/picturepan2/seo-audit.css" target="_blank">GitHub</a></p>
-        <p class="text-gray">Latest version: <span class="version"></span></p>
+    <div class="section-navbar">
+      <div class="container">
+        <header class="navbar">
+          <div class="navbar-section">
+            <div class="docs-brand"><a class="docs-logo" href="https://picturepan2.github.io/seo-audit.css/"><img src="assets/img/spectre-logo.svg" alt="Spectre.css CSS Framework">
+                <h1>SEO AUDIT.CSS</h1></a></div>
+            <div class="docs-nav hide-sm"><a class="btn btn-link" href="errors.html">Errors</a><a class="btn btn-link active" href="warnings.html">Warnings</a><a class="btn btn-link" href="advices.html">Advices</a></div>
+          </div>
+          <div class="navbar-section"><a class="btn btn-primary" href="https://github.com/picturepan2/seo-audit.css" target="_blank">GitHub</a></div>
+        </header>
+      </div>
+    </div>
+    <div class="section section-docs">
+      <div class="container grid-lg">
+        <div class="container" id="missing-empty-alt-images">
+          <h3 class="s-title">Missing or empty alt for images<a class="anchor" href="#missing-empty-alt-images" aria-hidden="true">#</a></h3>
+          <p>Search engines can't index plugin content, and many devices restrict plugins or don't support them. <a href="https://developers.google.com/web/tools/lighthouse/audits/plugins" target="_blank">Learn more</a></p>
+          <div class="docs-demo">
+            <div class="columns">
+              <div class="column col-6 col-sm-12"><img class="img-responsive" src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg"></div>
+            </div>
+          </div>
+          <div class="docs-demo">
+            <div class="columns">
+              <div class="column col-6 col-sm-12"><img class="img-responsive" src="https://picturepan2.github.io/spectre/img/osx-yosemite-2.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="plugins">
+          <h3 class="s-title">Document avoids plugins<a class="anchor" href="#plugins" aria-hidden="true">#</a></h3>
+          <p>Search engines can't index plugin content, and many devices restrict plugins or don't support them. <a href="https://developers.google.com/web/tools/lighthouse/audits/plugins" target="_blank">Learn more</a></p>
+          <div class="docs-demo">
+            <object data="move.swf" type="application/x-shockwave-flash"></object>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section section-ads bg-gray">
@@ -38,9 +65,11 @@
       </div>
     </div>
     <footer class="section section-footer">
-      <div class="docs-footer container grid-lg" id="copyright">
-        <p><a href="https://github.com/picturepan2/seo-lint.css" target="_blank">GitHub</a> · <a href="https://twitter.com/spectrecss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · <a href="https://www.patreon.com/spectrecss" target="_blank">Patreon Sponsor</a> · Version <span class="version"></span></p>
-        <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/spectre/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
+      <div class="container grid-lg">
+        <div class="docs-footer" id="copyright">
+          <p><a href="https://github.com/picturepan2/seo-lint.css" target="_blank">GitHub</a> · <a href="https://twitter.com/spectrecss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · <a href="https://www.patreon.com/spectrecss" target="_blank">Patreon Sponsor</a> · Version <span class="version"></span></p>
+          <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/spectre/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
+        </div>
       </div>
     </footer>
     <script>

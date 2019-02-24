@@ -1,30 +1,43 @@
 extends _layout/_layout.pug
 
 block variables
-  - var slug = 'index'
+  - var slug = 'warnings'
   - var parent = 'index'
-  - var title = 'SEO Audit.css'
+  - var title = 'SEO Warnings - SEO Audit.css'
   - var description = 'SEO Audit Tool powered by Pure CSS'
 
 block content
-  .section.section-hero.bg-gray
-    #overview.grid-hero.container.grid-lg.text-center
-      .docs-brand
-        a.docs-logo(href='index.html')
-          img(src='assets/img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-          h2 SPECTRE
-      h1 SEO AUDIT.CSS
-      h2
-        | SEO Audit Tool powered by Pure CSS
-      p
+  .section-navbar
+    .container
+      include _layout/_header.pug
+  
+  .section.section-docs
+    .container.grid-lg
+      +docs-heading('missing-empty-alt-images', 'Missing or empty alt for images')
+        p
+          | Search engines can't index plugin content, and many devices restrict plugins or don't support them. 
+          a(href="https://developers.google.com/web/tools/lighthouse/audits/plugins" target="_blank") Learn more
         
-        a.btn.btn-primary.btn-lg(href='https://github.com/picturepan2/seo-audit.css' target='_blank') GitHub
-      p.text-gray
-        | Latest version: 
-        span.version
+        .docs-demo
+          .columns
+            .column.col-6.col-sm-12
+              img.img-responsive(src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg")
+        .docs-demo
+          .columns
+            .column.col-6.col-sm-12
+              img.img-responsive(src="https://picturepan2.github.io/spectre/img/osx-yosemite-2.jpg" alt="")
+
+      +docs-heading('plugins', 'Document avoids plugins')
+        p
+          | Search engines can't index plugin content, and many devices restrict plugins or don't support them. 
+          a(href="https://developers.google.com/web/tools/lighthouse/audits/plugins" target="_blank") Learn more
+        
+        .docs-demo
+          object(data="move.swf" type="application/x-shockwave-flash")
 
   .section.section-ads.bg-gray
     include _layout/_ad-c.pug
 
   footer.section.section-footer
-    include _layout/_footer.pug
+    .container.grid-lg
+      include _layout/_footer.pug

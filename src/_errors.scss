@@ -1,1 +1,10 @@
 // SEO Audit - Errors
+// Missing or empty [href]
+a:not([href]) {
+  @include seo-tip('error', 'Missing [href]');
+}
+
+a[href=""],
+a[href=" "] {
+  @include seo-tip('error', 'Empty [href]');
+}

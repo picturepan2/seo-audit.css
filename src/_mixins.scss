@@ -1,0 +1,41 @@
+// Mixins
+@mixin seo-tip($type, $msg, $self-closing: false) {
+  $color: $dark-color;
+  @if $type == 'error' {
+    $color: $error-color;
+  } @else if $type == 'warning' {
+    $color: $warning-color;
+  } @else {
+    $color: $info-color;
+  }
+
+  $selector: '&::after';
+
+  counter-increment: unquote($type) !important;
+  outline: 3px solid $color !important;
+  outline-offset: $unit-h !important;
+  position: relative;
+
+  #{$selector} {
+    background: $color;
+    color: $light-color;
+    content: $msg;
+    display: block;
+    font-family: $body-font-family;
+    font-size: 12px;
+    height: $unit-5;
+    left: -5px;
+    line-height: $unit-4;
+    max-width: 100vw;
+    overflow: hidden;
+    padding: $unit-h $unit-1;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 100%;
+    transform: none;
+    white-space: pre;
+    width: auto;
+    z-index: 99999;
+  }
+}
